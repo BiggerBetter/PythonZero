@@ -1,6 +1,7 @@
+import cv2
+import numpy as np
 
-def print_hi():
-    print('Hi,CNM')
+# 读取图像
+image = cv2.imread('/Users/Jenius/Desktop/line.png', cv2.IMREAD_GRAYSCALE)
 
-if __name__ == '__main__':
-    print_hi('PyCharm')
+circles = cv2.HoughCircles()
