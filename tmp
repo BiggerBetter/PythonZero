@@ -1,7 +1,0 @@
-终端调用python程序方法
-
-1.先启动ollama：ollama run gpt-oss:20b
-2.退出ollama对话模式：/bye
-3.启动python程序：注意先断开vpn，去pycharm启动就行了. 先启动python程序再关闭vpn也不行的，会超时。启动后再打开就不影响了。
-
-4.curl -X POST "http://localhost:8000/chat"  -H "Content-Type: application/json"  -d '{"prompt": "你好，请自我介绍一下", "model": "gpt-oss:20b"}'

@@ -20,7 +20,6 @@ async def chat(request: ChatRequest):
     try:
         # 打印一下接收到的数据，方便调试
         print(f"正在调用模型: {request.model}, 内容: {request.prompt}")
-
         response = ollama.generate(
             model=request.model,
             prompt=request.prompt,
@@ -28,7 +27,8 @@ async def chat(request: ChatRequest):
         )
 
         print("response:", response['response'])
-        return {"response": response['response']}
+        # return {"response": response['response']}
+        return response['response']
     except ollama.ResponseError as e:
         # 如果是 Ollama 内部错误（比如模型找不到）
         print(f"Ollama 错误: {e.error}")
